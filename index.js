@@ -3,7 +3,7 @@ const { connection } = require("./db")
 const cors=require("cors")
 const { userRouter } = require("./routes/user.routes")
 const { logged } = require("./middleware/logged")
-const { emiRouter } = require("./routes/emi.routes")
+
 require("dotenv").config()
 const app=express()
 app.use(express.json())
@@ -11,6 +11,7 @@ app.use(cors())
 app.get("/",(req,res)=>{
     res.send("Home page")
 })
+
 
 
 app.use("/users",userRouter)

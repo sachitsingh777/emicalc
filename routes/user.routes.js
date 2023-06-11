@@ -59,7 +59,7 @@ catch(error){
 }
    
 })
-emiRouter.get("/emical",async(req,res)=>{
+userRouter.get("/emical",async(req,res)=>{
     try{
         const {loan,annual,tenure}=req.query
         loan=+loan
